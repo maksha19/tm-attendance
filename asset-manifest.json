@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/tm-attendance/static/css/main.54c40b0f.css",
-    "main.js": "/tm-attendance/static/js/main.ecf87604.js",
+    "main.js": "/tm-attendance/static/js/main.3a084b9a.js",
     "static/js/453.f0a6e1fc.chunk.js": "/tm-attendance/static/js/453.f0a6e1fc.chunk.js",
-    "static/media/cot_2024_header.png": "/tm-attendance/static/media/cot_2024_header.954c00919773eb3af2a7.png",
+    "static/media/HoF_Header.jpeg": "/tm-attendance/static/media/HoF_Header.9af1a441ab680d08ebda.jpeg",
     "index.html": "/tm-attendance/index.html",
     "main.54c40b0f.css.map": "/tm-attendance/static/css/main.54c40b0f.css.map",
-    "main.ecf87604.js.map": "/tm-attendance/static/js/main.ecf87604.js.map",
+    "main.3a084b9a.js.map": "/tm-attendance/static/js/main.3a084b9a.js.map",
     "453.f0a6e1fc.chunk.js.map": "/tm-attendance/static/js/453.f0a6e1fc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.54c40b0f.css",
-    "static/js/main.ecf87604.js"
+    "static/js/main.3a084b9a.js"
   ]
 }
