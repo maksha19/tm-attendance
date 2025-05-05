@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import axios from "axios";
-import header from "./cot_2024_header.png";
+import header from "./header.png";
 import { Scanner } from '@yudiel/react-qr-scanner';
 
 
@@ -9,13 +9,14 @@ function App() {
   const [registrationId, setRegistrationId] = useState("");
   const [title, setTitle] = useState("Enter your mobile number");
   const [name, setName] = useState("")
+  const [tableInfo, setTableInfo] = useState("");
+  const [showtableInfo, setShowTableInfo] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [isSubmit, setIsSubmit] = useState(false);
   const [isalreadyregistered, setAlreadyregistered] = useState(false)
 
   const inputOnChange = (e: any) => {
-
     setRegistrationId(e);
   };
 
@@ -24,6 +25,22 @@ function App() {
     setShowSuccessMessage(false)
     setAlreadyregistered(false)
   }
+
+  useEffect(() => {
+    handleTableInfo();
+  }, []);
+
+  const handleTableInfo = () => {
+    const currentDate = new Date();
+    if (
+      currentDate.getFullYear() === 2025 &&
+      currentDate.getMonth() === 4 && // Month is 0-indexed, so May is 4
+      currentDate.getDate() === 5 &&
+      currentDate.getHours() >= 18 // After 6 PM
+    ) {
+      setShowTableInfo(true);
+    }
+  };
 
   const submitRequest = async () => {
     setIsSubmit(true);
@@ -45,11 +62,15 @@ function App() {
           setShowSuccess(true);
           setIsSubmit(true);
           setName(response.data.name)
+          response.data.table && setTableInfo(response.data.table);
+          handleTableInfo();
         }, 0);
       } else if (statusCode === "208") {
         setTitle("Already Register !");
         setShowSuccessMessage(true)
         setName(response.data.name)
+        response.data.table && setTableInfo(response.data.table);
+        handleTableInfo()
         setAlreadyregistered(true)
       } else if (statusCode === "404") {
         setTitle("Record not found !");
@@ -82,7 +103,7 @@ function App() {
   return (
     <div className="container mx-auto grid min-h-screen bg-dark-green">
       <div style={{ height: '30%' }} className="grid justify-items-center">
-        <img src={header} alt="headerImage" />
+        <img src={header} alt="headerImage" className="bg-white"/>
       </div>
       <div className="grid my-12 grid-cols-6 gap-4 ">
         {
@@ -142,6 +163,7 @@ function App() {
                 <div className="my-2 grid justify-items-center ">
                   <span className="text-white font-bold my-1.5 text-xl">{'Welcome'}</span>
                   <span className="text-white font-bold my-1.5">{name}</span>
+                  {showtableInfo && <span className="text-white font-bold my-1.5">Your Table No: {tableInfo}</span>}
                   <span className="text-white font-bold my-1.5">{isalreadyregistered ? "Already Register !" : "Thanks for Register"}</span>
                 </div>
               </div>
