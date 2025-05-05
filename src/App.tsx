@@ -35,7 +35,7 @@ function App() {
     if (
       currentDate.getFullYear() === 2025 &&
       currentDate.getMonth() === 4 && // Month is 0-indexed, so May is 4
-      currentDate.getDate() === 5 &&
+      currentDate.getDate() === 10 &&
       currentDate.getHours() >= 18 // After 6 PM
     ) {
       setShowTableInfo(true);
