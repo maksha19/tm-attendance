@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/tm-attendance/static/css/main.54c40b0f.css",
-    "main.js": "/tm-attendance/static/js/main.ef731a9c.js",
+    "main.css": "/tm-attendance/static/css/main.15bdb3e9.css",
+    "main.js": "/tm-attendance/static/js/main.6624e2a3.js",
     "static/js/453.f0a6e1fc.chunk.js": "/tm-attendance/static/js/453.f0a6e1fc.chunk.js",
-    "static/media/WordmarkSince1924Color.png": "/tm-attendance/static/media/WordmarkSince1924Color.88fee5a5d4f64ebcf828.png",
+    "static/media/header.png": "/tm-attendance/static/media/header.88fee5a5d4f64ebcf828.png",
     "index.html": "/tm-attendance/index.html",
-    "main.54c40b0f.css.map": "/tm-attendance/static/css/main.54c40b0f.css.map",
-    "main.ef731a9c.js.map": "/tm-attendance/static/js/main.ef731a9c.js.map",
+    "main.15bdb3e9.css.map": "/tm-attendance/static/css/main.15bdb3e9.css.map",
+    "main.6624e2a3.js.map": "/tm-attendance/static/js/main.6624e2a3.js.map",
     "453.f0a6e1fc.chunk.js.map": "/tm-attendance/static/js/453.f0a6e1fc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.54c40b0f.css",
-    "static/js/main.ef731a9c.js"
+    "static/css/main.15bdb3e9.css",
+    "static/js/main.6624e2a3.js"
   ]
 }

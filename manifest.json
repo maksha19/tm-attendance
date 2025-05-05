@@ -1,6 +1,6 @@
 {
-  "short_name": "Toastmasters Distrct 80",
-  "name": "Toastmasters Distrct 80",
+  "short_name": "React App",
+  "name": "Create React App Sample",
   "icons": [
     {
       "src": "favicon.ico",
